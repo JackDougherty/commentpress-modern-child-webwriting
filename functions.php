@@ -40,6 +40,3 @@ function cpmodern_childtheme_enqueue_styles() {
 	);
 
 }
-
-// add a filter for the above
-add_filter( 'wp_enqueue_scripts', 'cpmodern_childtheme_enqueue_styles', 110 );
