@@ -1,1 +1,6 @@
+img.cp_logo_image {
+    float: left;
+    padding: 0px 0px 0;
+}
 h1, h2, h3, h4, h5, h6 {text-transform: none;}
+#toc_sidebar .sidebar_minimiser ul#toc_list li.current_page_ancestor > a, #toc_sidebar .sidebar_minimiser ul#toc_list li.current_page_item > a, #toc_sidebar .sidebar_minimiser ul#nav li.active_page > a {background-color: #FFFF99;}
