@@ -80,6 +80,19 @@ function cpmodernchild_enqueue_styles() {
 add_filter( 'wp_enqueue_scripts', 'cpmodernchild_enqueue_styles', 998 );
 
 
+/** 
+ * @description: override comment_form template by intercepting value
+ * @todo: 
+ *
+ */
+function cpmodernchild_template_comment_form() {
+	
+	// --<
+	return get_stylesheet_directory() . '/assets/templates/comment_form.php';
 
+}
+
+// add a filter for the above
+add_filter(	'cp_template_comment_form', 'cpmodernchild_template_comment_form' );
 
 
