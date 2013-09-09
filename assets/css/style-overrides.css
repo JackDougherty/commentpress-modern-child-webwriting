@@ -5,7 +5,7 @@ img.cp_logo_image {
 
 #title{
 height: 67px;
-text-indent: -9999px !important;
+text-indent: -9999px;
 }
 
 #title a {
@@ -15,9 +15,18 @@ height: 67px;
 
 #tagline{
 height: 0px;
-text-indent: -9999px !important;
+text-indent: -9999px;
 }
 
 
 h1, h2, h3, h4, h5, h6 {text-transform: none;}
 #toc_sidebar .sidebar_minimiser ul#toc_list li.current_page_ancestor > a, #toc_sidebar .sidebar_minimiser ul#toc_list li.current_page_item > a, #toc_sidebar .sidebar_minimiser ul#nav li.active_page > a {background-color: #FFFF99;}
+
+@media print {
+	#header #title,
+	#header #title a
+	{
+		text-indent: 0; 
+		height: auto;
+	}
+}
