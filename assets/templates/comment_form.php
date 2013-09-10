@@ -132,7 +132,7 @@ global $post;
 			</div>
 		<?php }
 	
-		?><p>By clicking the submit button, I retain the copyright for my comment, but agree to publicly share it under the Creative Commons license for this site. Anonymous comments and inappropriate language will be removed.</p>
+		?><p>By clicking the submit button, I retain the copyright for my comment, but agree to publicly share it under the Creative Commons license (BY-NC) for this site. (First comments may be delayed for moderation by an editor. Anonymous comments and inappropriate language will be removed.)</p>
 
 		<p id="respond_button"><input name="submit" type="submit" id="submit" value="<?php _e( 'Submit Comment', 'commentpress-core' ); ?>" /></p>
 
