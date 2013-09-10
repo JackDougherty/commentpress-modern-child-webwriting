@@ -1,33 +1,68 @@
-img.cp_logo_image {
+img.cp_logo_image 
+{
     float: left;
-    padding: 0px 0px 0;
+    padding: 0;
 }
 
-#title{
-height: 67px;
-text-indent: -9999px;
+#title
+{
+	height: 67px;
+	text-indent: -9999px;
 }
 
-#title a {
-display: block;
-height: 67px;
+#title a 
+{
+	display: block;
+	height: 67px;
 }
 
-#tagline{
-height: 0px;
-text-indent: -9999px;
+#tagline
+{
+	height: 0;
+	text-indent: -9999px;
+}
+
+h1, h2, h3, h4, h5, h6 
+{
+	text-transform: none;
+}
+
+#toc_sidebar .sidebar_minimiser ul#toc_list li.current_page_ancestor > a, 
+#toc_sidebar .sidebar_minimiser ul#toc_list li.current_page_item > a, 
+#toc_sidebar .sidebar_minimiser ul#nav li.active_page > a 
+{
+	background-color: #FFFF99;
 }
 
 
-h1, h2, h3, h4, h5, h6 {text-transform: none;}
-#toc_sidebar .sidebar_minimiser ul#toc_list li.current_page_ancestor > a, #toc_sidebar .sidebar_minimiser ul#toc_list li.current_page_item > a, #toc_sidebar .sidebar_minimiser ul#nav li.active_page > a {background-color: #FFFF99;}
 
+/* print overrides */
 @media print {
-	#header #title,
-	#header #title a
+	
+	/* forces all backgrounds to white */
+	* { background: white !important; }
+	
+	/* re-show your hidden elements */
+	body #header #title,
+	body #header #title a,
+	/* also affect header, but make more specific than CP print CSS */
+	body #header #title h1,
+	body #header #title h1 a,
+	body #header #title h1 a:link,
+	body #header #title h1 a:hover,
+	body #header #title h1 a:active,
+	body #header #title h1 a:visited
 	{
 		text-indent: 0; 
 		height: auto;
-		color: #000000;
+		color: #000 !important;
+		font-size: 16pt;
 	}
+	
+	/* reset link to inline */
+	#header #title a
+	{
+		display: inline;
+	}
+	
 }
