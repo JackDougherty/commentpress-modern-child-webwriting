@@ -34,7 +34,8 @@ h1, h2, h3, h4, h5, h6
 	background-color: #FFFF99;
 }
 
-
+/* for ZotPress bibliographic entries via Zotero library*/
+.csl-entry {font-size: 100%}
 
 /* print overrides */
 @media print {
