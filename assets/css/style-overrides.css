@@ -34,6 +34,16 @@ h1, h2, h3, h4, h5, h6
 	background-color: #FFFF99;
 }
 
+/* modify byline */
+div.search_meta cite {
+    font-size: 1em;
+    text-transform: none;
+}
+/* modify comments container */
+.comments_container > h3 > span, .comments_container > h3 a {
+	text-transform: none;
+}
+
 /* for ZotPress bibliographic entries via Zotero library*/
 .csl-entry {font-size: 100%}
 

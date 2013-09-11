@@ -96,3 +96,93 @@ function cpmodernchild_template_comment_form() {
 add_filter(	'cp_template_comment_form', 'cpmodernchild_template_comment_form' );
 
 
+// to remove the day-of-the-week from meta display in original theme
+if ( ! function_exists( 'commentpress_echo_post_meta' ) ):
+/** 
+ * @description: show user(s) in the loop
+ * @todo: 
+ *
+ */
+function commentpress_echo_post_meta() {
+
+	// compat with Co-Authors Plus
+	if ( function_exists( 'get_coauthors' ) ) {
+	
+		// get multiple authors
+		$authors = get_coauthors();
+		//print_r( $authors ); die();
+		
+		// if we get some
+		if ( !empty( $authors ) ) {
+		
+			// use the Co-Authors format of "name, name, name & name"
+			$author_html = '';
+			
+			// init counter
+			$n = 1;
+			
+			// find out how many author we have
+			$author_count = count( $authors );
+		
+			// loop
+			foreach( $authors AS $author ) {
+				
+				// default to comma
+				$sep = ', ';
+				
+				// if we're on the penultimate
+				if ( $n == ($author_count - 1) ) {
+				
+					// use ampersand
+					$sep = __( ' &amp; ', 'commentpress-core' );
+					
+				}
+				
+				// if we're on the last, don't add
+				if ( $n == $author_count ) { $sep = ''; }
+				
+				// get name
+				$author_html .= commentpress_echo_post_author( $author->ID, false );
+				
+				// and separator
+				$author_html .= $sep;
+				
+				// increment
+				$n++;
+				
+				// yes - are we showing avatars?
+				if ( get_option('show_avatars') ) {
+				
+					// get avatar
+					echo get_avatar( $author->ID, $size='32' );
+					
+				}
+					
+			}
+			
+			?><cite class="fn"><?php echo $author_html; ?></cite>
+			
+			<p><a href="<?php the_permalink() ?>"><?php the_time('F jS, Y') ?></a></p>
+			
+			<?php
+				
+		}
+	
+	} else {
+	
+		// get avatar
+		$author_id = get_the_author_meta( 'ID' );
+		echo get_avatar( $author_id, $size='32' );
+		
+		?>
+		
+		<cite class="fn"><?php commentpress_echo_post_author( $author_id ) ?></cite>
+		
+		<p><a href="<?php the_permalink() ?>"><?php the_time('F jS, Y') ?></a></p>
+		
+		<?php 
+	
+	}
+		
+}
+endif; // commentpress_echo_post_meta
