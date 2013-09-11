@@ -61,7 +61,7 @@ Separated this out for inclusion in multiple files.
 // until WordPress supports a locate_theme_file() function, use filter
 $include = apply_filters( 
 	'cp_template_toc_sidebar',
-	get_template_directory() . '/assets/templates/toc_sidebar.php'
+	get_stylesheet_directory() . '/assets/templates/toc_sidebar.php'
 );
 
 // always include TOC
