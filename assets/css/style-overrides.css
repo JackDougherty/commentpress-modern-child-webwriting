@@ -34,6 +34,12 @@ h1, h2, h3, h4, h5, h6
 	background-color: #FFFF99;
 }
 
+/* remove bottom padding from TOC */
+#toc_sidebar .sidebar_minimiser ul#toc_list 
+{
+  padding-bottom: 0;
+}
+
 /* modify byline */
 div.search_meta cite {
     font-size: 1em;
