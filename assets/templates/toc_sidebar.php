@@ -19,7 +19,20 @@
 <div class="sidebar_contents_wrapper">
 
 <h3 class="activity_heading"><?php 
-echo apply_filters( 'cp_content_tab_toc_title', __( 'Chapters', 'commentpress-core' ) ); 
+echo apply_filters( 'cp_content_tab_search_title', __( 'Search', 'commentpress-core' ) ); 
+?></h3>
+
+<div class="paragraph_wrapper search_wrapper">
+
+<div id="document_search">
+	<?php get_search_form(); ?>
+</div><!-- /book_search -->
+
+</div>
+
+
+<h3 class="activity_heading"><?php 
+echo apply_filters( 'cp_content_tab_toc_title', __( 'Book-in-progress', 'commentpress-core' ) ); 
 ?></h3>
 
 <div class="paragraph_wrapper start_open">
@@ -48,7 +61,6 @@ if ( is_object( $commentpress_core ) ) {
 </div>
 
 
-
 <h3 class="activity_heading"><?php 
 echo apply_filters( 'cp_content_tab_special_pages_title', __( 'Special Pages', 'commentpress-core' ) ); 
 ?></h3>
@@ -68,21 +80,6 @@ include( $include );
 ?>
 
 </div>
-
-
-<h3 class="activity_heading"><?php 
-echo apply_filters( 'cp_content_tab_search_title', __( 'Search', 'commentpress-core' ) ); 
-?></h3>
-
-<div class="paragraph_wrapper search_wrapper">
-
-<div id="document_search">
-	<?php get_search_form(); ?>
-</div><!-- /book_search -->
-
-</div>
-
-
 
 
 </div><!-- /sidebar_contents_wrapper -->
