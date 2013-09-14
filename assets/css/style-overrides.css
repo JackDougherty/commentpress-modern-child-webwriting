@@ -48,6 +48,15 @@ h1, h2, h3, h4, h5, h6
 	text-align: left;
 }
 
+/* shrink the switcher mobile device button size */
+#switcher ul li a 
+{
+	text-transform: none;
+	padding: 5px;
+}
+
+
+
 /* modify byline */
 div.search_meta cite {
     font-size: 1em;
