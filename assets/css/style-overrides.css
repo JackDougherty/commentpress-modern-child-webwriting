@@ -40,6 +40,14 @@ h1, h2, h3, h4, h5, h6
   padding-bottom: 0;
 }
 
+/* modify footer for copyright info*/
+#footer_inner
+{
+	margin-right: 5px;
+	padding: 10px;
+	text-align: left;
+}
+
 /* modify byline */
 div.search_meta cite {
     font-size: 1em;
