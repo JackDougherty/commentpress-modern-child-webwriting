@@ -32,7 +32,7 @@ echo apply_filters( 'cp_content_tab_search_title', __( 'Search', 'commentpress-c
 
 
 <h3 class="activity_heading"><?php 
-echo apply_filters( 'cp_content_tab_toc_title', __( 'Book-in-progress', 'commentpress-core' ) ); 
+echo apply_filters( 'cp_content_tab_toc_title', __( 'Book in-progress', 'commentpress-core' ) ); 
 ?></h3>
 
 <div class="paragraph_wrapper start_open">
