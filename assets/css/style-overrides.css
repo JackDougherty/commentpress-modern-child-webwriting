@@ -54,7 +54,10 @@ h1, h2, h3, h4, h5, h6
 	text-transform: none;
 	padding: 5px;
 }
-
+#switcher ul li
+{
+	height: 30px;
+}
 
 
 /* modify byline */
