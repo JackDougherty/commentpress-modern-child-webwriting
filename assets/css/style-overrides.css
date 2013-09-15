@@ -59,15 +59,25 @@ h1, h2, h3, h4, h5, h6
 	height: 30px;
 }
 
-
 /* modify byline */
 div.search_meta cite {
     font-size: 1em;
     text-transform: none;
 }
+
+/* modify comment form labels */
+#commentform #author_details label {
+    text-transform: none;
+}
+
 /* modify comments container */
 .comments_container > h3 > span, .comments_container > h3 a {
 	text-transform: none;
+}
+
+/* modify footnote color*/
+#content sup a.footnote-link, #content a.simple-footnote sup, #content sup.footnote a, .footnotereverse a, .footnote-link.footnote-back-link, .simple-footnotes li > a {
+    background-color: #99CCFF;
 }
 
 /* for ZotPress bibliographic entries via Zotero library*/
