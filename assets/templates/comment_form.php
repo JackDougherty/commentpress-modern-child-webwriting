@@ -78,7 +78,7 @@ global $post;
 				<p><label for="author"><small><?php _e( 'Your full name (no anonymous comments)', 'commentpress-core' ); ?><?php if ($req) echo ' <span class="req">('.__( 'required', 'commentpress-core' ).')</span>'; ?></small></label><br />
 				<input type="text" name="author" id="author" value="<?php echo $comment_author; ?>" size="30"<?php if ($req) echo ' aria-required="true"'; ?> /></p>
 			
-				<p><label for="email"><small><?php _e( 'Mail (will not be published)', 'commentpress-core' ); ?><?php if ($req) echo ' <span class="req">('.__( 'required', 'commentpress-core' ).')</span>'; ?></small></label><br />
+				<p><label for="email"><small><?php _e( 'Email (will not be published)', 'commentpress-core' ); ?><?php if ($req) echo ' <span class="req">('.__( 'required', 'commentpress-core' ).')</span>'; ?></small></label><br />
 				<input type="text" name="email" id="email" value="<?php echo $comment_author_email; ?>" size="30"<?php if ($req) { echo ' aria-required="true"'; } ?> /></p>
 			
 				<p class="author_not_logged_in"><label for="url"><small><?php _e( 'Your personal website (optional)', 'commentpress-core' ); ?></small></label><br />
